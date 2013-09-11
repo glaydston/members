@@ -1,0 +1,34 @@
+<!-- jsf:pagecode language="java" location="/src/pagecode/ColaboradorView.java" --><!-- /jsf:pagecode -->
+<div  
+	xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:f="http://java.sun.com/jsf/core"
+ 	xmlns:h="http://java.sun.com/jsf/html" 
+ 	xmlns:portlet="http://java.sun.com/portlet_2_0">
+
+	<f:view>
+		<h:panelGroup rendered="#{empty pc_ColaboradorView.process}">
+			<h1>Nenhum processo associado ao seu perfil!</h1>
+		</h:panelGroup>		
+		<h:panelGroup rendered="#{not empty pc_ColaboradorView.process}">
+			<table>
+				<tr> 
+					<th colspan="3">Lista de Processo(s)</th>
+				</tr>
+				<tr>
+					<th>Nome</th>
+					<th>Descricao</th>
+					<th>Responsavel</th>
+				</tr>
+				<ui:repeat 
+					value="#{pc_ColaboradorView.process}"
+					var="process">
+					<tr>
+						<td>#{process.name}</td>
+						<td>#{process.description}</td>
+						<td>#{process.member.name}</td>
+					</tr>
+				</ui:repeat>
+			</table>
+		</h:panelGroup>
+	</f:view>
+</div>

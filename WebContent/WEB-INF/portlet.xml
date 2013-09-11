@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" id="com.ibm.faces20.portlet.FacesPortlet.48f69e5014">
+	<portlet>
+		<portlet-name>Colaborador</portlet-name>
+		<display-name xml:lang="pt-BR">Colaborador</display-name>
+		<display-name>Colaborador</display-name>
+		<portlet-class>com.ibm.faces20.portlet.FacesPortlet</portlet-class>
+		<init-param>
+			<name>com.ibm.faces.portlet.page.view</name>
+			<value>/ColaboradorView.xhtml</value>
+		</init-param>
+		<init-param>
+			<name>com.ibm.faces.portlet.page.edit</name>
+			<value>/ColaboradorEdit.xhtml</value>
+		</init-param>
+		<init-param>
+			<name>wps.markup</name>
+			<value>html</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+		</supports>
+		<supported-locale>pt_BR</supported-locale>
+		<resource-bundle>com.ibm.colaborador.nl.ColaboradorPortletResource</resource-bundle>
+		<portlet-info>
+			<title>Colaborador</title>
+			<short-title>Colaborador</short-title>
+			<keywords>Colaborador</keywords>
+		</portlet-info>
+	</portlet>
+	<default-namespace>http://Colaborador/</default-namespace>
+</portlet-app>
